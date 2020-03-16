@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{2ED61419-717C-4E9D-8B1E-A73A40170C63}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="agentf.c" />
+    <ClCompile Include="aqsync.c" />
+    <ClCompile Include="be_all.c" />
+    <ClCompile Include="be_all_s.c" />
+    <ClCompile Include="be_misc.c" />
+    <ClCompile Include="be_none.c" />
+    <ClCompile Include="be_nossh.c" />
+    <ClCompile Include="be_nos_s.c" />
+    <ClCompile Include="be_ssh.c" />
+    <ClCompile Include="callback.c" />
+    <ClCompile Include="cgtest.c" />
+    <ClCompile Include="charset\enum.c" />
+    <ClCompile Include="charset\fromucs.c" />
+    <ClCompile Include="charset\localenc.c" />
+    <ClCompile Include="charset\macenc.c" />
+    <ClCompile Include="charset\mimeenc.c" />
+    <ClCompile Include="charset\sbcs.c" />
+    <ClCompile Include="charset\sbcsdat.c" />
+    <ClCompile Include="charset\slookup.c" />
+    <ClCompile Include="charset\toucs.c" />
+    <ClCompile Include="charset\utf8.c" />
+    <ClCompile Include="charset\xenc.c" />
+    <ClCompile Include="cmdgen.c" />
+    <ClCompile Include="cmdline.c" />
+    <ClCompile Include="conf.c" />
+    <ClCompile Include="config.c" />
+    <ClCompile Include="contrib\cygtermd\main.c" />
+    <ClCompile Include="contrib\cygtermd\malloc.c" />
+    <ClCompile Include="contrib\cygtermd\pty.c" />
+    <ClCompile Include="contrib\cygtermd\sel.c" />
+    <ClCompile Include="contrib\cygtermd\telnet.c" />
+    <ClCompile Include="cproxy.c" />
+    <ClCompile Include="dialog.c" />
+    <ClCompile Include="ecc.c" />
+    <ClCompile Include="errsock.c" />
+    <ClCompile Include="fuzzterm.c" />
+    <ClCompile Include="import.c" />
+    <ClCompile Include="ldisc.c" />
+    <ClCompile Include="logging.c" />
+    <ClCompile Include="mainchan.c" />
+    <ClCompile Include="marshal.c" />
+    <ClCompile Include="memory.c" />
+    <ClCompile Include="minibidi.c" />
+    <ClCompile Include="misc.c" />
+    <ClCompile Include="miscucs.c" />
+    <ClCompile Include="mpint.c" />
+    <ClCompile Include="nocmdline.c" />
+    <ClCompile Include="nocproxy.c" />
+    <ClCompile Include="nogss.c" />
+    <ClCompile Include="noprint.c" />
+    <ClCompile Include="noshare.c" />
+    <ClCompile Include="noterm.c" />
+    <ClCompile Include="notiming.c" />
+    <ClCompile Include="nullplug.c" />
+    <ClCompile Include="pageant.c" />
+    <ClCompile Include="pgssapi.c" />
+    <ClCompile Include="pinger.c" />
+    <ClCompile Include="portfwd.c" />
+    <ClCompile Include="pproxy.c" />
+    <ClCompile Include="proxy.c" />
+    <ClCompile Include="pscp.c" />
+    <ClCompile Include="psftp.c" />
+    <ClCompile Include="psftpcommon.c" />
+    <ClCompile Include="raw.c" />
+    <ClCompile Include="rlogin.c" />
+    <ClCompile Include="scpserver.c" />
+    <ClCompile Include="sercfg.c" />
+    <ClCompile Include="sesschan.c" />
+    <ClCompile Include="sessprep.c" />
+    <ClCompile Include="settings.c" />
+    <ClCompile Include="sftp.c" />
+    <ClCompile Include="sftpcommon.c" />
+    <ClCompile Include="sftpserver.c" />
+    <ClCompile Include="ssh.c" />
+    <ClCompile Include="ssh1bpp.c" />
+    <ClCompile Include="ssh1censor.c" />
+    <ClCompile Include="ssh1connection-client.c" />
+    <ClCompile Include="ssh1connection-server.c" />
+    <ClCompile Include="ssh1connection.c" />
+    <ClCompile Include="ssh1login-server.c" />
+    <ClCompile Include="ssh1login.c" />
+    <ClCompile Include="ssh2bpp-bare.c" />
+    <ClCompile Include="ssh2bpp.c" />
+    <ClCompile Include="ssh2censor.c" />
+    <ClCompile Include="ssh2connection-client.c" />
+    <ClCompile Include="ssh2connection-server.c" />
+    <ClCompile Include="ssh2connection.c" />
+    <ClCompile Include="ssh2kex-client.c" />
+    <ClCompile Include="ssh2kex-server.c" />
+    <ClCompile Include="ssh2transhk.c" />
+    <ClCompile Include="ssh2transport.c" />
+    <ClCompile Include="ssh2userauth-server.c" />
+    <ClCompile Include="ssh2userauth.c" />
+    <ClCompile Include="sshaes.c" />
+    <ClCompile Include="ssharcf.c" />
+    <ClCompile Include="sshauxcrypt.c" />
+    <ClCompile Include="sshbcrypt.c" />
+    <ClCompile Include="sshblowf.c" />
+    <ClCompile Include="sshccp.c" />
+    <ClCompile Include="sshcommon.c" />
+    <ClCompile Include="sshcrc.c" />
+    <ClCompile Include="sshcrcda.c" />
+    <ClCompile Include="sshdes.c" />
+    <ClCompile Include="sshdh.c" />
+    <ClCompile Include="sshdss.c" />
+    <ClCompile Include="sshdssg.c" />
+    <ClCompile Include="sshecc.c" />
+    <ClCompile Include="sshecdsag.c" />
+    <ClCompile Include="sshgssc.c" />
+    <ClCompile Include="sshhmac.c" />
+    <ClCompile Include="sshmac.c" />
+    <ClCompile Include="sshmd5.c" />
+    <ClCompile Include="sshnogss.c" />
+    <ClCompile Include="sshprime.c" />
+    <ClCompile Include="sshprng.c" />
+    <ClCompile Include="sshpubk.c" />
+    <ClCompile Include="sshrand.c" />
+    <ClCompile Include="sshrsa.c" />
+    <ClCompile Include="sshrsag.c" />
+    <ClCompile Include="sshserver.c" />
+    <ClCompile Include="sshsh256.c" />
+    <ClCompile Include="sshsh512.c" />
+    <ClCompile Include="sshsha.c" />
+    <ClCompile Include="sshshare.c" />
+    <ClCompile Include="sshverstring.c" />
+    <ClCompile Include="sshzlib.c" />
+    <ClCompile Include="stripctrl.c" />
+    <ClCompile Include="telnet.c" />
+    <ClCompile Include="terminal.c" />
+    <ClCompile Include="testback.c" />
+    <ClCompile Include="testcrypt.c" />
+    <ClCompile Include="testsc.c" />
+    <ClCompile Include="testzlib.c" />
+    <ClCompile Include="test\sclog\sclog.c" />
+    <ClCompile Include="time.c" />
+    <ClCompile Include="timing.c" />
+    <ClCompile Include="tree234.c" />
+    <ClCompile Include="unix\gtkapp.c" />
+    <ClCompile Include="unix\gtkask.c" />
+    <ClCompile Include="unix\gtkcfg.c" />
+    <ClCompile Include="unix\gtkcols.c" />
+    <ClCompile Include="unix\gtkcomm.c" />
+    <ClCompile Include="unix\gtkdlg.c" />
+    <ClCompile Include="unix\gtkfont.c" />
+    <ClCompile Include="unix\gtkmain.c" />
+    <ClCompile Include="unix\gtkmisc.c" />
+    <ClCompile Include="unix\gtkwin.c" />
+    <ClCompile Include="unix\osxlaunch.c" />
+    <ClCompile Include="unix\procnet.c" />
+    <ClCompile Include="unix\uxagentc.c" />
+    <ClCompile Include="unix\uxagentsock.c" />
+    <ClCompile Include="unix\uxcfg.c" />
+    <ClCompile Include="unix\uxcons.c" />
+    <ClCompile Include="unix\uxfdsock.c" />
+    <ClCompile Include="unix\uxgen.c" />
+    <ClCompile Include="unix\uxgss.c" />
+    <ClCompile Include="unix\uxmisc.c" />
+    <ClCompile Include="unix\uxnet.c" />
+    <ClCompile Include="unix\uxnogtk.c" />
+    <ClCompile Include="unix\uxnoise.c" />
+    <ClCompile Include="unix\uxpeer.c" />
+    <ClCompile Include="unix\uxpgnt.c" />
+    <ClCompile Include="unix\uxplink.c" />
+    <ClCompile Include="unix\uxpoll.c" />
+    <ClCompile Include="unix\uxprint.c" />
+    <ClCompile Include="unix\uxproxy.c" />
+    <ClCompile Include="unix\uxpterm.c" />
+    <ClCompile Include="unix\uxpty.c" />
+    <ClCompile Include="unix\uxputty.c" />
+    <ClCompile Include="unix\uxsel.c" />
+    <ClCompile Include="unix\uxser.c" />
+    <ClCompile Include="unix\uxserver.c" />
+    <ClCompile Include="unix\uxsftp.c" />
+    <ClCompile Include="unix\uxsftpserver.c" />
+    <ClCompile Include="unix\uxshare.c" />
+    <ClCompile Include="unix\uxsignal.c" />
+    <ClCompile Include="unix\uxstore.c" />
+    <ClCompile Include="unix\uxucs.c" />
+    <ClCompile Include="unix\uxutils.c" />
+    <ClCompile Include="unix\ux_x11.c" />
+    <ClCompile Include="unix\x11misc.c" />
+    <ClCompile Include="unix\xkeysym.c" />
+    <ClCompile Include="unix\xpmptcfg.c" />
+    <ClCompile Include="unix\xpmpterm.c" />
+    <ClCompile Include="unix\xpmpucfg.c" />
+    <ClCompile Include="unix\xpmputty.c" />
+    <ClCompile Include="utils.c" />
+    <ClCompile Include="version.c" />
+    <ClCompile Include="wcwidth.c" />
+    <ClCompile Include="wildcard.c" />
+    <ClCompile Include="windows\sizetip.c" />
+    <ClCompile Include="windows\wincapi.c" />
+    <ClCompile Include="windows\wincfg.c" />
+    <ClCompile Include="windows\wincons.c" />
+    <ClCompile Include="windows\winctrls.c" />
+    <ClCompile Include="windows\windefs.c" />
+    <ClCompile Include="windows\windlg.c" />
+    <ClCompile Include="windows\window.c" />
+    <ClCompile Include="windows\wingss.c" />
+    <ClCompile Include="windows\winhandl.c" />
+    <ClCompile Include="windows\winhelp.c" />
+    <ClCompile Include="windows\winhsock.c" />
+    <ClCompile Include="windows\winjump.c" />
+    <ClCompile Include="windows\winmisc.c" />
+    <ClCompile Include="windows\winmiscs.c" />
+    <ClCompile Include="windows\winnet.c" />
+    <ClCompile Include="windows\winnohlp.c" />
+    <ClCompile Include="windows\winnoise.c" />
+    <ClCompile Include="windows\winnojmp.c" />
+    <ClCompile Include="windows\winnpc.c" />
+    <ClCompile Include="windows\winnps.c" />
+    <ClCompile Include="windows\winpgen.c" />
+    <ClCompile Include="windows\winpgnt.c" />
+    <ClCompile Include="windows\winpgntc.c" />
+    <ClCompile Include="windows\winplink.c" />
+    <ClCompile Include="windows\winprint.c" />
+    <ClCompile Include="windows\winproxy.c" />
+    <ClCompile Include="windows\winsecur.c" />
+    <ClCompile Include="windows\winser.c" />
+    <ClCompile Include="windows\winsftp.c" />
+    <ClCompile Include="windows\winshare.c" />
+    <ClCompile Include="windows\winstore.c" />
+    <ClCompile Include="windows\wintime.c" />
+    <ClCompile Include="windows\winucs.c" />
+    <ClCompile Include="windows\winutils.c" />
+    <ClCompile Include="windows\winx11.c" />
+    <ClCompile Include="x11fwd.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="charset\charset.h" />
+    <ClInclude Include="charset\internal.h" />
+    <ClInclude Include="contrib\cygtermd\malloc.h" />
+    <ClInclude Include="contrib\cygtermd\pty.h" />
+    <ClInclude Include="contrib\cygtermd\sel.h" />
+    <ClInclude Include="contrib\cygtermd\telnet.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="dialog.h" />
+    <ClInclude Include="ecc.h" />
+    <ClInclude Include="empty.h" />
+    <ClInclude Include="ldisc.h" />
+    <ClInclude Include="licence.h" />
+    <ClInclude Include="marshal.h" />
+    <ClInclude Include="misc.h" />
+    <ClInclude Include="mpint.h" />
+    <ClInclude Include="mpint_i.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="pageant.h" />
+    <ClInclude Include="pgssapi.h" />
+    <ClInclude Include="proxy.h" />
+    <ClInclude Include="psftp.h" />
+    <ClInclude Include="putty.h" />
+    <ClInclude Include="puttymem.h" />
+    <ClInclude Include="puttyps.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="sftp.h" />
+    <ClInclude Include="ssh.h" />
+    <ClInclude Include="ssh1connection.h" />
+    <ClInclude Include="ssh2connection.h" />
+    <ClInclude Include="ssh2transport.h" />
+    <ClInclude Include="sshblowf.h" />
+    <ClInclude Include="sshbpp.h" />
+    <ClInclude Include="sshchan.h" />
+    <ClInclude Include="sshcr.h" />
+    <ClInclude Include="sshgss.h" />
+    <ClInclude Include="sshgssc.h" />
+    <ClInclude Include="sshppl.h" />
+    <ClInclude Include="sshserver.h" />
+    <ClInclude Include="sshsignals.h" />
+    <ClInclude Include="sshttymodes.h" />
+    <ClInclude Include="storage.h" />
+    <ClInclude Include="terminal.h" />
+    <ClInclude Include="testcrypt.h" />
+    <ClInclude Include="tree234.h" />
+    <ClInclude Include="unix\gtkcols.h" />
+    <ClInclude Include="unix\gtkcompat.h" />
+    <ClInclude Include="unix\gtkfont.h" />
+    <ClInclude Include="unix\gtkmisc.h" />
+    <ClInclude Include="unix\unix.h" />
+    <ClInclude Include="unix\x11misc.h" />
+    <ClInclude Include="version.h" />
+    <ClInclude Include="windows\rcstuff.h" />
+    <ClInclude Include="windows\wincapi.h" />
+    <ClInclude Include="windows\winhelp.h" />
+    <ClInclude Include="windows\winsecur.h" />
+    <ClInclude Include="windows\winstuff.h" />
+    <ClInclude Include="windows\win_res.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="windows\pageant.rc" />
+    <ResourceCompile Include="windows\plink.rc" />
+    <ResourceCompile Include="windows\pscp.rc" />
+    <ResourceCompile Include="windows\psftp.rc" />
+    <ResourceCompile Include="windows\putty.rc" />
+    <ResourceCompile Include="windows\puttygen.rc" />
+    <ResourceCompile Include="windows\puttytel.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="windows\version.rc2" />
+    <None Include="windows\winhelp.rc2" />
+    <None Include="windows\win_res.rc2" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
